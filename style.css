@@ -159,13 +159,20 @@ ul {
 }
 
 .profile-photo {
-    width: 180px;
-    height: 180px;
+    width: clamp(150px, 22vw, 220px);
+    height: clamp(150px, 22vw, 220px);
+    aspect-ratio: 1 / 1;
     border-radius: 24px;
     object-fit: cover;
     border: 2px solid rgba(0, 245, 255, 0.3);
     box-shadow: 0 0 30px rgba(0, 245, 255, 0.15), 0 30px 80px rgba(0, 0, 0, 0.35);
     filter: brightness(1.05) contrast(1.1);
+}
+
+@media (max-width: 760px) {
+    .hero-profile {
+        flex-direction: column;
+    }
 }
 
 .hero-contact-links {
